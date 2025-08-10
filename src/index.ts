@@ -141,6 +141,7 @@ server.tool("create_time_entry",
         try {
             const url = `${TOGGL_API_URL}/workspaces/${workspaceId}/time_entries`;
             const data = await executeApiRequest(url, "POST", {
+                workspace_id: workspaceId,
                 description,
                 project_id: projectId,
                 task_id: taskId,
